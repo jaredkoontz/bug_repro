@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "bug_repro"
+version = "0.10.3"
+description = ""
+authors = [
+    "Jared K <email@example.com>"
+]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "3.8.3"
+
+#mit. Python logging made (stupidly) simple. https://pypi.org/project/loguru/
+loguru = "*"
+
+[tool.poetry.dev-dependencies]
+
+#mit - python formatter.  https://black.readthedocs.io/en/stable/
+black = { version = "*", allow-prereleases = true }
+
+[tool.poetry.scripts]
+bug_repro = 'bug_repro.package_api:cli'
+
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+
